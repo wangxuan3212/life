@@ -1,0 +1,38 @@
+<!--pages/car/car.wxml-->
+<view class="top fixed">购物车</view>
+ <view class="separate" style="margin-top:90rpx"></view>
+ <view class="car_item" wx:for="{{carts}}" wx:key="{{index}}" >
+<van-swipe-cell style="width:100%;height:200rpx;" id="swipe-cell" right-width="{{ 65 }}" left-width="{{ 65 }}" async-close bind:close="onClose">
+  <van-cell-group>
+  <view class="cart_container">
+<image class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'cloud://web-test-01-c6gz2.7765-web-test-01-c6gz2/check_box.png':'cloud://web-test-01-c6gz2.7765-web-test-01-c6gz2/check_box_none.png'}}" />
+  <image class="item-image" src="{{item.pic}}"></image>
+   <view class="column">
+    <text class="title" >{{item.name}}</text>
+    <view class="row">
+     <text class="sku-price">￥</text>
+     <text class="sku-price">{{item.price}}</text>
+     <view class="number">
+    <view class="btn" bindtap='reduce'  data-index="{{index}}" data-id="{{index}}">-</view>
+    <view class="btn other">{{item.number}}</view>
+    <view class="btn" bindtap='add' bind:change="onScoreChange"  data-index="{{index}}" data-id="{{index}}">+</view>
+     </view>
+    </view>
+   </view>
+  </view>
+  <view class="separate"></view> 
+    <van-cell title="单元格" value="内容" />
+  </van-cell-group>
+  <view slot="right" class="delete" bindtap='delete'>删除</view>
+</van-swipe-cell>
+ </view>
+<view class="bottom_total">
+ <view class="bottom_line"></view>
+ <view class="row">
+ <image class="item-allselect" bindtap="allSelect" src="{{isAllSelect?'cloud://web-test-01-c6gz2.7765-web-test-01-c6gz2/check_box.png':'cloud://web-test-01-c6gz2.7765-web-test-01-c6gz2/check_box_none.png'}}" />
+  <text class="small_text">全选</text>
+  <text>合计:￥ </text>
+  <text class="price">{{totalMoney}}</text>
+  <button class="button-red" bindtap="toBuy" formType="submit">去结算</button>
+ </view>
+</view>

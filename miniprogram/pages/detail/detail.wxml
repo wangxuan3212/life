@@ -1,0 +1,83 @@
+<!--pages/detail/detail.wxml-->
+<view class="top fixed">商品详情</view>
+<swiper class="swiper_top" indicator-dots="{{indicatorDots}} "
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}} " >
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="title" > 
+<view>{{product.title}}</view> 
+<view class="price">￥{{product.price}}</view> 
+<view class="goods">
+  <view class="last">
+    <image class="circle" src='cloud://web-test-01-c6gz2.7765-web-test-01-c6gz2/check_box.png'></image>
+    <view class="ensure">正品保障</view>
+  </view>
+  <view class="last" style="margin-left:30rpx">
+      <image class="circle  last" src='cloud://web-test-01-c6gz2.7765-web-test-01-c6gz2/check_box.png'></image>
+      <view class="ensure">极速发货</view>
+  </view>
+</view>
+</view>
+<view class="select">
+    <text>选择</text>
+    <text class="size">规格</text>
+    <text style="margin-left:500rpx;color:#ccc" bindtap='theSize'>></text>
+</view>
+
+<view class="show" style="display:{{status}}">
+ <icon type="clear" size="20"  bindtap='clear'/>
+ <view class="show-item">
+ <image src="{{product.image}}"></image>
+      <view class="show_detail">
+          <view class="show_price">￥280</view>
+          <view class="stock">库存78</view>  
+      </view>
+  </view>
+  <view class="show_size">
+      <view class="produce_size">规格</view>
+      <view class="default">默认</view>
+  </view>
+  <view class="show_size number">
+    <view class="produce_size">数量</view>
+    <van-stepper value="{{ 1 }}" bind:change="numberChange" /> 
+  </view>
+</view>
+
+<van-tabs  >
+  <van-tab title="商品详情"></van-tab>
+  <van-tab title="评价"></van-tab>
+</van-tabs>
+
+<view class="detail_image">
+<image src="{{product.image}}"></image>
+<image src="cloud://web-test-01-c6gz2.7765-web-test-01-c6gz2/49.jpg"></image>
+</view>
+
+
+
+<van-goods-action>
+  <van-goods-action-icon
+    icon="chat-o"
+    text="客服"
+    bind:click="onClickIcon"
+  />
+  <van-goods-action-icon
+    icon="cart-o"
+    text="购物车"
+    bind:click="onClickIcon"
+  />
+  <van-goods-action-button
+    text="加入购物车"
+    type="warning"
+    bind:click="onClickButton"
+  />
+  <van-goods-action-button
+    text="立即购买"
+    bind:click="onClickButton"
+  />
+</van-goods-action>

@@ -1,0 +1,11 @@
+<!--pages/new/new.wxml-->
+<view class="top fixed">新品特惠</view>
+<view class="marg_top">
+<view class="container " wx:for="{{product}}" wx:key="{{index}}"   >
+<image src='{{item.image}}' bindtap='toDetail' data-id="{{index}}"></image>
+<view class="detail" bindtap='toDetail' data-id="{{index}}">{{item.title}}</view>
+<view class="detail detail_color" bindtap='toDetail' data-id="{{index}}">{{item.subtitle}}</view>
+<van-button class="btn" size="small" round type='warning' bindtap='toDetail' data-id="{{index}}">立即咨询</van-button>
+</view>
+
+</view> 

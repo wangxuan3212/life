@@ -1,0 +1,51 @@
+<view class="top fixed">首页</view>
+<swiper class="swiper_top" indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="center_bar">
+   <view class="center_item">
+       <image src='/images/6.png' bindtap='theCase'></image>
+       <view class="center_item_font" >热卖</view>
+     </view>
+      <view class="center_item" bindtap='theCase'>
+       <image src='/images/7.png' ></image>
+       <view class="center_item_font" >被芯</view>
+     
+     </view>
+      <view class="center_item" bindtap='theCase'>
+       <image src='/images/8.png' ></image>
+       <view class="center_item_font" >枕头</view>
+     </view>
+      <view class="center_item" bindtap='theCase'>
+       <image src='/images/9.png' ></image>
+       <view class="center_item_font">套件</view>
+     </view>
+</view>
+<view class="top" bindtap='theCase'>新品上市</view>
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <block wx:for="{{imgs}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="img-wrapper"><image src="cloud://web-test-01-c6gz2.7765-web-test-01-c6gz2/15.jpg"  bindtap='theCase'></image></view>
+<view class="bottom" bindtap='theCase'>
+<view class="bottom_item"><image src="cloud://web-test-01-c6gz2.7765-web-test-01-c6gz2/16.jpg"></image></view>
+<view class="bottom_item"><image src="cloud://web-test-01-c6gz2.7765-web-test-01-c6gz2/17.jpg"></image></view>
+</view>
+<view class="top" bindtap='theCase'>热销产品</view>
+<view class="content" >
+    <view class="item" wx:for="{{product}}" wx:key='{{index}}'  bindtap='jumpPage'>
+        <image class="product_img" data-id="{{index}}" src="{{item.image}}"></image>
+       <view class="title"  >{{item.title}}</view>
+       <text style="color:#f00;height:12%">￥{{item.price}}</text>
+       <text class="sale">已售 {{item.sale}}件</text>
+    </view> 
+</view>

@@ -1,0 +1,159 @@
+/* pages/detail/detail.wxss */
+page{
+ background: #f4f4f4;
+}
+.top{
+  text-align:center;
+  font-size:18px;
+  width:100%;
+  height:50px;
+  line-height:50px;
+  background:#fff;
+}
+.fixed{
+  position:fixed;
+  z-index: 999;
+  top:0;
+  left:0
+}
+.slide-image{
+  width:100%;
+  height:100%;
+}
+swiper{
+  width:100%;
+  height:250px;
+  position:relative;
+}
+.swiper_top{
+  margin-top:50px;
+}
+.top{
+  text-align:center;
+  font-size:18px;
+  width:100%;
+  height:50px;
+  line-height:50px;
+  background:#fff;
+}
+.fixed{
+  position:fixed;
+  z-index: 999;
+  top:0;
+  left:0
+}
+.title,size{
+  font-size:28rpx;
+  background:#fff;
+ 
+  color:#333;
+  border-bottom:3rpx solid #ccc;
+  padding:25rpx;
+}
+.price{
+color:#f00;
+font-size:32rpx;
+margin-top:20rpx;
+font-weight: normal;
+border-bottom:3rpx solid #eee;
+padding-bottom:25rpx;
+}
+.circle{
+  width:25rpx;
+  height: 25rpx;
+  float: left;
+  margin-top:2rpx;
+}
+.ensure{
+  font-size:24rpx;
+  margin-left:30rpx;
+}
+.goods{
+  margin-top:20rpx;
+  padding-bottom:5rpx;
+  height:30rpx;
+}
+.last{
+  float: left;
+}
+.select{
+  width: 100%;
+  height: 40rpx;
+  margin-top: 20rpx;
+  background:#fff;
+  font-size:36rpx;
+  padding:30rpx;
+  color:#333;
+  margin-bottom:20rpx;
+}
+.size{
+  font-size:28rpx;
+  margin-left:40rpx;
+  color:#666;
+}
+.detail_image{
+  width:100%;
+  margin-bottom:60rpx;
+}
+.detail_image image{
+  width:100%;
+  height: 450rpx;
+ 
+}
+.show{
+  width:100%;
+  height:550rpx;
+  background: #eee;
+  position:fixed;
+  bottom:92rpx;
+  left:0;
+  z-index: 999;
+ 
+}
+.show-item,.show_size{
+  width:100%;
+  height:152rpx;
+  padding:20rpx;
+  border-bottom: 3rpx solid #ddd;
+}
+.show-item image{
+  width:150rpx;
+  height:150rpx;
+  float: left;
+}
+.show_price{
+  color:#f00;
+  margin:20rpx 0;
+}
+.show_detail{
+float:left;
+font-size:30rpx;
+margin-left:50rpx;
+}
+.produce_size{
+  font-size:34rpx;
+  color:#333;
+}
+.default{
+  height:70rpx;
+  width:120rpx;
+  background:#EC554E;
+  color:#fff;
+  font-size:30rpx;
+  text-align:center;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+  margin-top:30rpx;
+}
+.number{
+  height: 120rpx;
+}
+.van-stepper{
+  float:right;
+  margin-right:80rpx;
+}
+icon{
+  margin-top:10rpx;
+  margin-right:20rpx;
+  float:right;
+}

@@ -1,0 +1,10 @@
+<!--pages/product/product.wxml-->
+<view class="top fixed">热销产品</view>
+<view class="content" >
+    <view class="item" wx:for="{{product}}" wx:key='{{index}}'  bindtap='jumpPage'>
+        <image class="product_img" data-id="{{index}}" src="{{item.image}}"></image>
+       <view class="title"  >{{item.title}}</view>
+       <text style="color:#f00;height:12%">￥{{item.price}}</text>
+       <text class="sale">已售 {{item.sale}}件</text>
+    </view> 
+</view>
